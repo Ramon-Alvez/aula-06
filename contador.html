@@ -1,0 +1,21 @@
+<form>
+    <input type="number" id="valorMaximo" placeholder="valorMaximo">
+
+    <input type="button" id="botaoDeAcao" value="Contar">
+</form>
+
+<script>
+    document.getElementById('botaoDeAcao').onclick = function() {
+        
+        $valorMaximo = parseInt(document.getElementById('valorMaximo').value);
+
+        // Limitador para não quebrar o sistema (hipotéticamente)
+        if ($valorMaximo > 50) {
+            $valorMaximo = 50;
+        }
+
+        for($contador = 0; $contador <= $valorMaximo; $contador++) {
+            document.write($contador + '<br>')
+        }
+    }
+</script>
